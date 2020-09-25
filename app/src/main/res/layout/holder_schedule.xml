@@ -66,11 +66,13 @@
             <TextView
                 android:id="@+id/tvItemTag"
                 tools:text="Tag"
+                android:layout_marginTop="@dimen/_4dp"
+                android:background="@drawable/shape_topic"
                 android:textColor="@android:color/white"
                 android:ellipsize="end"
                 android:lines="1"
                 android:textSize="@dimen/_15sp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>

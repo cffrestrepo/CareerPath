@@ -26,6 +26,7 @@
                     android:elevation="@dimen/_0dp">
 
                     <LinearLayout
+                        android:background="@drawable/shape_parrafo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -33,6 +34,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_150dp"
+                            android:layout_marginTop="@dimen/_4dp"
                             android:src="@drawable/img_banner_platzi_conf"/>
                         
                         <View
@@ -79,6 +81,7 @@
                     android:elevation="@dimen/_0dp">
 
                     <LinearLayout
+                        android:background="@drawable/shape_parrafo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -133,6 +136,7 @@
                     android:elevation="@dimen/_0dp">
 
                     <LinearLayout
+                        android:background="@drawable/shape_parrafo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
