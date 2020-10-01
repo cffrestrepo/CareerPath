@@ -8,4 +8,5 @@ class Speaker {
      var biography =""
     var twitter = ""
     var image = ""
+    var category = 0
 }
