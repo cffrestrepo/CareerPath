@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1011544168434",
+    "firebase_url": "https://careerpath-97309.firebaseio.com",
+    "project_id": "careerpath-97309",
+    "storage_bucket": "careerpath-97309.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011544168434:android:bfa3c51792cc65ee75bd6b",
+        "android_client_info": {
+          "package_name": "com.career.careerpath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011544168434-3ep7l6o02bds1tjppr98fam6qfbrgs67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.career.careerpath",
+            "certificate_hash": "07126c2c841a725d760dabf88532940f6bf950bc"
+          }
+        },
+        {
+          "client_id": "1011544168434-7jc4o6007tseqhkbsf4u4230mn6oojji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAUL6kduLvLJSMSHiWvoaMdxoHfPAoG90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011544168434-7jc4o6007tseqhkbsf4u4230mn6oojji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
