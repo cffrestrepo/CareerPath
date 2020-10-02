@@ -1,6 +1,7 @@
 package com.career.careerpath.view.adapter
 
-import android.telecom.Conference
+import com.career.careerpath.model.Conference
+
 
 interface ScheduleListener {
 

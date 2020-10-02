@@ -35,7 +35,9 @@ class ScheduleAdapter(val scheduleListener : ScheduleListener) : RecyclerView.Ad
         holder.binding.tvItemHora.text = hourFormat
         holder.binding.tvItemHoraAmPm.text = hourFormatAmPm
 
-
+        holder.itemView.setOnClickListener {
+            scheduleListener.onConferenceClicked(listConference[position], position)
+        }
     }
 
     fun ubdateData(data : List<Conference>){
