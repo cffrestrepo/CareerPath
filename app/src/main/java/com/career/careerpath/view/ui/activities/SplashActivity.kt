@@ -1,4 +1,4 @@
-package com.career.careerpath.ui.activities
+package com.career.careerpath.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,14 +1,8 @@
-package com.career.careerpath
+package com.career.careerpath.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.career.careerpath.databinding.ActivityMainBinding
-import com.career.careerpath.model.Conference
-import com.career.careerpath.model.Speaker
-import com.google.firebase.firestore.FirebaseFirestore
-import org.json.JSONArray
-import org.json.JSONObject
-import java.util.*
+import com.career.careerpath.R
 
 class MainActivity : AppCompatActivity() {
 

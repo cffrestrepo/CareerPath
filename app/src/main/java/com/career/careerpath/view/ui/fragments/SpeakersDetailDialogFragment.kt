@@ -1,4 +1,4 @@
-package com.career.careerpath.ui.fragments
+package com.career.careerpath.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

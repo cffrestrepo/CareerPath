@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navHomeFragment"
-        android:name="com.career.careerpath.ui.fragments.HomeFragment"
+        android:name="com.career.careerpath.view.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/naScheduleFragment"
-        android:name="com.career.careerpath.ui.fragments.ScheduleFragment"
+        android:name="com.career.careerpath.view.ui.fragments.ScheduleFragment"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/navSpeakersFragment"
-        android:name="com.career.careerpath.ui.fragments.SpeakersFragment"
+        android:name="com.career.careerpath.view.ui.fragments.SpeakersFragment"
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/navMapFragment"
-        android:name="com.career.careerpath.ui.fragments.UbicationFragment"
+        android:name="com.career.careerpath.view.ui.fragments.UbicationFragment"
         android:label="fragment_ubication"
         tools:layout="@layout/fragment_ubication" >
         <action
@@ -50,19 +50,19 @@
 
     <dialog
         android:id="@+id/scheduleDetailDialogFragment"
-        android:name="com.career.careerpath.ui.fragments.ScheduleDetailDialogFragment"
+        android:name="com.career.careerpath.view.ui.fragments.ScheduleDetailDialogFragment"
         android:label="ScheduleDetailDialogFragment"
         tools:layout="@layout/fragment_schedule_detail_dialog" />
 
     <dialog
         android:id="@+id/speakersDetailDialogFragment"
-        android:name="com.career.careerpath.ui.fragments.SpeakersDetailDialogFragment"
+        android:name="com.career.careerpath.view.ui.fragments.SpeakersDetailDialogFragment"
         android:label="SpeakersDetailDialogFragment"
         tools:layout="@layout/fragment_speakers_detail_dialog" />
 
     <dialog
         android:id="@+id/ubicationDetailDialogFragment"
-        android:name="com.career.careerpath.ui.fragments.UbicationDetailDialogFragment"
+        android:name="com.career.careerpath.view.ui.fragments.UbicationDetailDialogFragment"
         android:label="UbicationDetailDialogFragment"
         tools:layout="@layout/fragment_ubication_detail_dialog" />
 

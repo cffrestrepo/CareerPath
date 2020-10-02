@@ -1,4 +1,4 @@
-package com.career.careerpath.ui.fragments
+package com.career.careerpath.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SpeakersFragment.newInstance] factory method to
+ * Use the [ScheduleDetailDialogFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SpeakersFragment : Fragment() {
+class ScheduleDetailDialogFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +35,7 @@ class SpeakersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_speakers, container, false)
+        return inflater.inflate(R.layout.fragment_schedule_detail_dialog, container, false)
     }
 
     companion object {
@@ -45,12 +45,12 @@ class SpeakersFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SpeakersFragment.
+         * @return A new instance of fragment ScheduleDetailDialogFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SpeakersFragment().apply {
+            ScheduleDetailDialogFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

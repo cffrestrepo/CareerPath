@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="@dimen/_4dp"
-    android:layout_margin="@dimen/_5dp"
-    android:elevation="@dimen/_0dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_parrafo"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/_5dp"
+        android:elevation="@dimen/_0dp"
+        app:cardCornerRadius="@dimen/_4dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_150dp"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_margin="@dimen/_10dp"/>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/_20sp"
-            android:textColor="@color/colorPrimaryDark"
-            tools:text="Nombre expositor"
-            android:text=""/>
+            android:background="@drawable/shape_parrafo"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_15sp"
-            android:gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/_10dp"
-            android:textColor="@color/colorAccent"
-            tools:text="Trabajo expositor"
-            android:text=""/>
+            <ImageView
+                android:id="@+id/imgExpositor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150dp"
+                android:layout_margin="@dimen/_10dp"
+                android:src="@drawable/ic_launcher_background" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvNameExpositor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold"
+                tools:text="Nombre expositor" />
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tvTrabajoExpositor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_15sp"
+                tools:text="Trabajo expositor" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
