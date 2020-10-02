@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
-    
+
     // region  Carga de datos basica a firestore
     /*
             val jsonArr = JSONArray("[\n" +
