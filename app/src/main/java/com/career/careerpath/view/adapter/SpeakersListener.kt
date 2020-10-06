@@ -4,6 +4,6 @@ import com.career.careerpath.model.Speaker
 
 interface SpeakersListener {
 
-    fun onConferenceClicked(speaker: Speaker, position:Int)
+    fun onSpeakerClicked(speaker: Speaker, position:Int)
 
 }

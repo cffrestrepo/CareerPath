@@ -71,15 +71,13 @@ class ScheduleFragment : Fragment(), ScheduleListener {
 
         viewModel.isLoading.observe(this, Observer<Boolean> {
             if (it != null)
-                rlLoadingSchedule.visibility = View.VISIBLE
-
+                rlLoadingSchedule.visibility = View.GONE
         })
     }
 
     override fun onConferenceClicked(conference: Conference, position: Int) {
-val bundle = bundleOf("conference" to conference)
+        val bundle = bundleOf("conference" to conference)
         findNavController().navigate(R.id.scheduleDetailDialogFragment, bundle)
-
     }
 
     /*

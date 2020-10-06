@@ -1,14 +1,16 @@
 package com.career.careerpath.viewmodel
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.career.careerpath.model.Conference
+import com.career.careerpath.model.Speaker
 import com.career.careerpath.network.Callback
 import com.career.careerpath.network.FirestoreService
 import java.lang.Exception
 
-class SpeakersViewModel {
+class SpeakersViewModel : ViewModel(){
     val firestoreService = FirestoreService()
-    var listSchedule: MutableLiveData<List<Conference>> = MutableLiveData()
+    var listSpeaker: MutableLiveData<List<Speaker>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
     fun refresh() {
@@ -16,9 +18,9 @@ class SpeakersViewModel {
     }
 
     fun getScheduleFromFirebase() {
-        firestoreService.getSchedule(object:Callback<List<Conference>>{
-            override fun onSuccess(result: List<Conference>?) {
-                listSchedule.postValue(result)
+        firestoreService.getSpeakers(object:Callback<List<Speaker>>{
+            override fun onSuccess(result: List<Speaker>?) {
+                listSpeaker.postValue(result)
                 processFinished()
             }
 

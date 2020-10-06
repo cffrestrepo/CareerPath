@@ -37,7 +37,7 @@ class SpeakersAdapter(val speakersListener: SpeakersListener) :
             .apply(RequestOptions.circleCropTransform()).into(holder.binding.imgExpositor)
 
         holder.itemView.setOnClickListener {
-            speakersListener.onConferenceClicked(listSpeakers[position], position)
+            speakersListener.onSpeakerClicked(listSpeakers[position], position)
         }
     }
 
