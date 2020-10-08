@@ -1,22 +1,26 @@
 package com.career.careerpath.view.ui.fragments
 
+import android.R.attr.data
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.career.careerpath.R
+import com.career.careerpath.databinding.FragmentScheduleBinding
 import com.career.careerpath.model.Conference
 import com.career.careerpath.view.adapter.ScheduleAdapter
 import com.career.careerpath.view.adapter.ScheduleListener
 import com.career.careerpath.viewmodel.ScheduleViewModel
 import kotlinx.android.synthetic.main.fragment_schedule.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,6 +35,7 @@ class ScheduleFragment : Fragment(), ScheduleListener {
 
     private lateinit var scheduleAdpater: ScheduleAdapter
     private lateinit var viewModel: ScheduleViewModel
+    private lateinit var binding: FragmentScheduleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,13 +51,21 @@ class ScheduleFragment : Fragment(), ScheduleListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
+
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_schedule, container, false
+        )
+        val view: View = binding.getRoot()
+        //here data must be an instance of the class MarsDataProvider
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
         viewModel.refresh()
+
+        binding.viewmodel = viewModel
 
         scheduleAdpater = ScheduleAdapter(this)
         rvSchedule.apply {
@@ -72,6 +85,10 @@ class ScheduleFragment : Fragment(), ScheduleListener {
         viewModel.isLoading.observe(this, Observer<Boolean> {
             if (it != null)
                 rlLoadingSchedule.visibility = View.GONE
+        })
+
+        viewModel.cantidad.observe(this, Observer<Int>{
+            tvCantidad.text = it.toString()
         })
     }
 
