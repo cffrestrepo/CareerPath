@@ -75,8 +75,7 @@ class ScheduleDetailDialogFragment : DialogFragment() {
         try {
             super.show(manager, tag)
         } catch (exception: Exception) {
-            //FirebaseCrashlytics.getInstance().log("Crash show dialog fragment isAdded : $isAdded previusFragment != null : ${fragment != null} tag: $tag")
-            //FirebaseCrashlytics.getInstance().recordException(exception)
+
         }
     }
 

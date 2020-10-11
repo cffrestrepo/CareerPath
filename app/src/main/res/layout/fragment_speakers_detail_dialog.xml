@@ -19,7 +19,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -27,19 +28,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_150dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_platzi_conf_2" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:layout_marginBottom="@dimen/_40dp"
                     android:elevation="@dimen/_2dp"
                     app:cardCornerRadius="@dimen/_4dp">
 
@@ -53,7 +57,6 @@
                             android:id="@+id/tvNameSpeaker"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:layout_marginTop="@dimen/_5dp"
                             android:ellipsize="end"
                             android:gravity="center"
@@ -83,23 +86,16 @@
                             android:textSize="@dimen/_17sp"
                             tools:text="Trabajo" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/_20dp"
-                            android:src="@mipmap/ic_launcher_round" />
-
                         <TextView
                             android:id="@+id/tvDescripcion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_20dp"
+                            android:layout_marginTop="@dimen/_2dp"
+                            android:layout_marginBottom="@dimen/_10dp"
                             android:gravity="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/_20sp"
-                            tools:text="Job title Job title Job title Job title
-                        Job title Job title Job title Job title" />
+                            tools:text="Job title Job title Job" />
 
                     </LinearLayout>
 
