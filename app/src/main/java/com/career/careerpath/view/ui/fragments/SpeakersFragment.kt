@@ -17,6 +17,7 @@ import com.career.careerpath.model.Speaker
 import com.career.careerpath.view.adapter.SpeakersAdapter
 import com.career.careerpath.view.adapter.SpeakersListener
 import com.career.careerpath.viewmodel.SpeakersViewModel
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_schedule.*
 import kotlinx.android.synthetic.main.fragment_speakers.*
 
@@ -34,16 +35,6 @@ class SpeakersFragment : Fragment(), SpeakersListener {
 
     private lateinit var speakersAdapter: SpeakersAdapter
     private lateinit var viewModel: SpeakersViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        /*
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-         */
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -82,7 +73,7 @@ class SpeakersFragment : Fragment(), SpeakersListener {
     }
 
     override fun onSpeakerClicked(speaker: Speaker, position: Int) {
-        val bundle = bundleOf("speaker" to speaker)
+        val bundle = bundleOf("speaker" to Gson().toJson(speaker))
         findNavController().navigate(R.id.speakersDetailDialogFragment, bundle)
     }
 

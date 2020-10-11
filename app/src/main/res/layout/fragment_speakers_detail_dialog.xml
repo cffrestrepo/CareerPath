@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".view.ui.fragments.SpeakersDetailDialogFragment">
-
-<com.google.android.material.appbar.AppBarLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".view.ui.fragments.SpeakersDetailDialogFragment">
 
-    <Toolbar
-        android:id="@+id/toolBarConference"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
 
-</com.google.android.material.appbar.AppBarLayout>
+        <Toolbar
+            android:id="@+id/toolBarConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_platzi_conf_2" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15dp"
-                android:elevation="@dimen/_2dp"
-                app:cardCornerRadius="@dimen/_4dp">
-
-                <LinearLayout
-                    android:background="@drawable/shape_parrafo"
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_platzi_conf_2" />
 
-                    <TextView
-                        android:id="@+id/tvNameSpeaker"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15dp"
+                    android:elevation="@dimen/_2dp"
+                    app:cardCornerRadius="@dimen/_4dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:lines="1"
-                        android:ellipsize="end"
-                        android:layout_marginTop="@dimen/_5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/_20sp"
-                        tools:text="Nombre y apellido" />
+                        android:background="@drawable/shape_parrafo"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvTituloTrabajo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="@dimen/_2dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/_15sp"
-                        tools:text="Job title" />
+                        <TextView
+                            android:id="@+id/tvNameSpeaker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_5dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_20sp"
+                            android:textStyle="bold"
+                            tools:text="Nombre y apellido" />
 
-                    <TextView
-                        android:id="@+id/tvTrabajo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="@dimen/_2dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/_17sp"
-                        tools:text="Trabajo" />
+                        <TextView
+                            android:id="@+id/tvTituloTrabajo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_15sp"
+                            tools:text="Job title" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_20dp"
-                        android:src="@mipmap/ic_launcher_round"
-                        android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/tvTrabajo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_17sp"
+                            tools:text="Trabajo" />
 
-                    <TextView
-                        android:id="@+id/tvDescripcion"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="@dimen/_20dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/_20sp"
-                        tools:text="Job title Job title Job title Job title
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_20sp"
+                            tools:text="Job title Job title Job title Job title
                         Job title Job title Job title Job title" />
 
-                </LinearLayout>
+                    </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
 
-</FrameLayout>
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

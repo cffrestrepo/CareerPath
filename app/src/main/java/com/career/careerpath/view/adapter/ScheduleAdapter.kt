@@ -26,8 +26,8 @@ class ScheduleAdapter(val scheduleListener : ScheduleListener) : RecyclerView.Ad
         holder.binding.tvItemConferenceSpeakers.text = listConference[position].speaker
         holder.binding.tvItemTag.text = listConference[position].tag
 
-        var simpleDateFormat = SimpleDateFormat("HH:mm")
-        var simpleDateFormatAMPM = SimpleDateFormat("a")
+        val simpleDateFormat = SimpleDateFormat("HH:mm")
+        val simpleDateFormatAMPM = SimpleDateFormat("a")
 
         val hourFormat = simpleDateFormat.format(listConference[position].datetime)
         val hourFormatAmPm = simpleDateFormatAMPM.format(listConference[position].datetime)
