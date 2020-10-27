@@ -54,6 +54,8 @@ class UbicationFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
         val markeroptions = MarkerOptions()
         markeroptions.position(centerMark)
         markeroptions.title("Cris")
+
+        markeroptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.dinosaurio))
 /*
         val bitmapDraw = context?.applicationContext?.let {
             ContextCompat.getDrawable(it, R.drawable.ic_map_marker)
@@ -61,7 +63,7 @@ class UbicationFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
 
         val smallMarker = Bitmap.createScaledBitmap(bitmapDraw.bitmap, 150, 150, false)
         markeroptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
-        
+
  */
 
         googleMap?.addMarker(markeroptions)
