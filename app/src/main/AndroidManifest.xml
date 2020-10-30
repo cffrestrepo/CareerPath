@@ -14,14 +14,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBAUL6kduLvLJSMSHiWvoaMdxoHfPAoG90"/>
 
-        <activity android:name=".view.ui.activities.MainActivity">
+        <activity android:name=".view.ui.activities.MainActivity"/>
+        <activity android:name="com.career.careerpath.view.ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.career.careerpath.view.ui.activities.SplashActivity"/>
     </application>
 
 </manifest>
