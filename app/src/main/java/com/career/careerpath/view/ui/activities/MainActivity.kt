@@ -1,20 +1,28 @@
 package com.career.careerpath.view.ui.activities
 
+import android.app.Application
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.career.careerpath.Application.ApplicationCareerPath
 import com.career.careerpath.R
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
     // lateinit var binding : ActivityMainBinding
 
+    @Inject
+    lateinit var contextApplication : Application
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setActionBar(findViewById(R.id.tollbarMain))
+        (application as ApplicationCareerPath).getApplicationComponent().mainActivity(this)
         configNav()
     }
 
